@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wilisson <wilisson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:10:01 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/12 14:12:39 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/15 12:53:13 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if(c >= 32 && c <= 126)
-        return 1;
-    return 0;
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

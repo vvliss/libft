@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 14:13:14 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/18 13:30:39 by wilisson         ###   ########.fr       */
+/*   Created: 2025/07/16 14:07:09 by wilisson          #+#    #+#             */
+/*   Updated: 2025/07/18 16:41:32 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	pos;
+	const char	*ptr;
 
-	pos = 0;
-	while (str[pos] != '\0')
-		pos++;
-	return (pos);
+	ptr = s;
+	while (*ptr)
+		ptr++;
+	while (ptr >= s)
+	{
+		if (*ptr == (char)c)
+			return ((char *)ptr);
+		ptr--;
+	}
+	if ((char)c == '\0')
+		return ((char *)ptr);
+	return (NULL);
 }

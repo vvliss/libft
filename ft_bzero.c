@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 14:13:14 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/18 13:30:39 by wilisson         ###   ########.fr       */
+/*   Created: 2025/07/13 14:18:46 by wilisson          #+#    #+#             */
+/*   Updated: 2025/07/15 12:29:55 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-size_t	ft_strlen(const char *str)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	pos;
+	unsigned char	*ptr;
+	size_t			i;
 
-	pos = 0;
-	while (str[pos] != '\0')
-		pos++;
-	return (pos);
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		*(ptr + i) = 0;
+		i++;
+	}
 }

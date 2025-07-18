@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Untitled-1.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wilisson <wilisson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:36:41 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/12 18:27:00 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/18 14:33:08 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memset(void *poi, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t i;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	if (poi == NULL)
-	{
-		return(NULL);
-	}
-	unsigned char *ptr;
-	ptr = (unsigned char *)poi;
-
-	while (i < len && ptr[i] != '\0')
+	ptr = (unsigned char *)b;
+	while (i < len)
 	{
 		ptr[i] = c;
 		i++;
 	}
-	return (poi);
-}
-
-int main()
-{
-	char *dimi = "hi my name is dimi";
- 	ft_memset(dimi, 'c', 30);	
+	return (b);
 }

@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 14:13:14 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/18 13:30:39 by wilisson         ###   ########.fr       */
+/*   Created: 2025/07/16 12:11:49 by wilisson          #+#    #+#             */
+/*   Updated: 2025/07/18 16:46:11 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_toupper(int c)
 {
-	size_t	pos;
-
-	pos = 0;
-	while (str[pos] != '\0')
-		pos++;
-	return (pos);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

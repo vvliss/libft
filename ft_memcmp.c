@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/12 14:13:14 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/18 13:30:39 by wilisson         ###   ########.fr       */
+/*   Created: 2025/07/16 19:00:18 by wilisson          #+#    #+#             */
+/*   Updated: 2025/07/16 20:09:05 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	pos;
+	size_t			i;
+	unsigned char	*sa;
+	unsigned char	*sb;
 
-	pos = 0;
-	while (str[pos] != '\0')
-		pos++;
-	return (pos);
+	i = 0;
+	sa = (unsigned char *)s1;
+	sb = (unsigned char *)s2;
+	while (i < n)
+	{
+		if ((unsigned char)sa[i] != (unsigned char)sb[i])
+			return ((unsigned char)sa[i] - (unsigned char)sb[i]);
+		i++;
+	}
+	return (0);
 }

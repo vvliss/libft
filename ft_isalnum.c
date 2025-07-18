@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wilisson <wilisson@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 13:58:33 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/12 14:03:06 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/15 12:31:47 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int digi)
+int	ft_isalnum(int digi)
 {
-    if((digi >= '0' && digi <= '9') || (digi >= 'A' && digi <= 'Z') || (digi >= 'a' && digi <= 'z'))
-        return 1;
-    return 0;
+	if ((digi >= '0' && digi <= '9')
+		|| (digi >= 'A' && digi <= 'Z')
+		|| (digi >= 'a' && digi <= 'z'))
+		return (1);
+	return (0);
 }
