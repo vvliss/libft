@@ -6,7 +6,7 @@
 #    By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/15 12:29:45 by wilisson          #+#    #+#              #
-#    Updated: 2025/07/18 14:03:59 by wilisson         ###   ########.fr        #
+#    Updated: 2025/07/19 15:58:54 by wilisson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,9 @@ SRCS = ft_isalnum.c \
 		ft_memcmp.c \
 		ft_calloc.c \
 		ft_strdup.c \
-
+		ft_substr.c \
+		ft_strjoin.c \
+		
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
