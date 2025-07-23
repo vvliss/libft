@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/21 18:44:58 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/21 19:05:22 by wilisson         ###   ########.fr       */
+/*   Created: 2025/07/22 21:22:08 by wilisson          #+#    #+#             */
+/*   Updated: 2025/07/22 21:33:04 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+t_list *ft_lstnew(void *content)
 {
-	unsigned int	i;
+	t_list *new;
 
-	if (!s || !(*s) || !f)
-		return ;
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		++i;
-	}
+	new = malloc()
 }

@@ -6,9 +6,11 @@
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 13:58:33 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/15 12:31:47 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/22 13:34:26 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(int digi)
 {

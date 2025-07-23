@@ -6,9 +6,11 @@
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 13:53:23 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/15 12:51:29 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/22 13:34:45 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int num)
 {

@@ -6,11 +6,11 @@
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:36:41 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/18 14:33:08 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/22 13:35:29 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

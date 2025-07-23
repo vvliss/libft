@@ -6,7 +6,7 @@
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 18:38:10 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/21 18:50:13 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/22 21:51:31 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	new_str = malloc(strlen(s) + 1);
+	new_str = malloc(ft_strlen(s) + 1);
 	if (!new_str)
 		return (NULL);
 	i = 0;

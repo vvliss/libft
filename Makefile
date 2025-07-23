@@ -6,7 +6,7 @@
 #    By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/15 12:29:45 by wilisson          #+#    #+#              #
-#    Updated: 2025/07/19 15:58:54 by wilisson         ###   ########.fr        #
+#    Updated: 2025/07/22 21:11:06 by wilisson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,15 @@ SRCS = ft_isalnum.c \
 		ft_strdup.c \
 		ft_substr.c \
 		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 		
 OBJS = $(SRCS:.c=.o)
 

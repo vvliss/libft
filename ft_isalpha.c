@@ -6,9 +6,11 @@
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 13:14:12 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/15 12:47:46 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/22 13:34:35 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int lett)
 {
