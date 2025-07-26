@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 19:21:32 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/20 13:02:14 by wilisson         ###   ########.fr       */
+/*   Created: 2025/07/24 15:00:16 by wilisson          #+#    #+#             */
+/*   Updated: 2025/07/25 00:13:13 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	start;
-	size_t	end;
-	char	*trimmed;
+	t_list	*end;
 
-	if (!s1 || !set)
-		return (NULL);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set, s1[end - 1]))
-		end--;
-	trimmed = malloc(end - start + 1);
-	if (!trimmed)
-		return (NULL);
-	ft_strlcpy(trimmed, s1 + start, end - start + 1);
-	return (trimmed);
+	if (lst == NULL || new == NULL)
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	end = ft_lstlast(*lst);
+	end->next = new;
 }

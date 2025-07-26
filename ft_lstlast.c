@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 19:21:32 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/20 13:02:14 by wilisson         ###   ########.fr       */
+/*   Created: 2025/07/24 14:44:42 by wilisson          #+#    #+#             */
+/*   Updated: 2025/07/25 00:15:29 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	start;
-	size_t	end;
-	char	*trimmed;
+	t_list	*tmp;
 
-	if (!s1 || !set)
+	tmp = lst;
+	if (lst == NULL)
 		return (NULL);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set, s1[end - 1]))
-		end--;
-	trimmed = malloc(end - start + 1);
-	if (!trimmed)
-		return (NULL);
-	ft_strlcpy(trimmed, s1 + start, end - start + 1);
-	return (trimmed);
+	while (tmp->next)
+	{
+		tmp = tmp->next;
+	}
+	return (tmp);
 }

@@ -6,7 +6,7 @@
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 13:04:28 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/21 16:26:42 by wilisson         ###   ########.fr       */
+/*   Updated: 2025/07/21 19:05:38 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ static size_t	counting_substrings(char const *s, char c)
 
 static void	free_all(char **split)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	if (split == NULL) //we checking whether the "list" itself exists
+	if (split == NULL)
 		return ;
 	while (split[i] != NULL)
 		free(split[i++]);
@@ -45,12 +45,12 @@ static void	free_all(char **split)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t sub_len;
-	size_t i;
-	char **split;
-	
+	size_t	sub_len;
+	size_t	i;
+	char	**split;
+
 	i = 0;
-	split = (char **)malloc((counting_substrings(s, c) + 1) * sizeof(char *)); //split will hold the address of an array of strings (char *)
+	split = (char **)malloc((counting_substrings(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
 	while (*s)
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 			if (!split[i])
 				return (free_all(split), NULL);
 			i++;
-			s = s + sub_len; //skipping (changing place) to the end of the currently worked on sub
+			s = s + sub_len;
 		}
 	}
 	return (split[i] = NULL, split);

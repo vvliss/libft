@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wilisson <wilisson@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 19:21:32 by wilisson          #+#    #+#             */
-/*   Updated: 2025/07/20 13:02:14 by wilisson         ###   ########.fr       */
+/*   Created: 2025/07/25 00:19:36 by wilisson          #+#    #+#             */
+/*   Updated: 2025/07/25 00:56:37 by wilisson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	start;
-	size_t	end;
-	char	*trimmed;
+	t_list	*new_l;
+	t_list	*node;
 
-	if (!s1 || !set)
+	if (!lst || !f || !del)
 		return (NULL);
-	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set, s1[end - 1]))
-		end--;
-	trimmed = malloc(end - start + 1);
-	if (!trimmed)
-		return (NULL);
-	ft_strlcpy(trimmed, s1 + start, end - start + 1);
-	return (trimmed);
+	new_l = NULL;
+	while (lst != NULL)
+	{
+		node = ft_lstnew(f(lst->content));
+		while (!node)
+		{
+			ft_lstclear(&new_l, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_l, node);
+		lst = lst->next;
+	}
+	return (new_l);
 }
